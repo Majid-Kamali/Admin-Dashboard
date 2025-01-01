@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dashboard</title>
+    <link rel="shortcut icon" href="./images/fiveIcon.png" type="image/png">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <svg class="hidden">
+        <!-- * -- Navbar -- * -->
+        <symbol id="chevron-circle-left-alt" viewBox="0 0 56 56">
+            <path
+                d="m27.9999 51.9063c13.0547 0 23.9064-10.8282 23.9064-23.9063 0-13.0547-10.8751-23.9063-23.9298-23.9063-13.0782 0-23.8828 10.8516-23.8828 23.9063 0 13.0781 10.8281 23.9063 23.9062 23.9063zm4.3125-11.7188c-.6562.6562-1.9219.5625-2.625-.0703l-10.2656-9.6563c-1.3594-1.3125-1.3828-3.5625 0-4.8515l10.2656-9.6563c.7735-.7265 1.8984-.7734 2.6016-.0703.7265.7266.7968 1.9453.0468 2.6484l-10.1249 9.4922 10.1249 9.5391c.7032.6797.7266 1.875-.0234 2.625z" />
+        </symbol>
+        <symbol id="home" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+            <g fill="currentColor">
+                <path d="m22 22.75h-20c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h20c.41 0 .75.34.75.75s-.34.75-.75.75z" />
+                <path
+                    d="m3.7002 21.9997h-1.5l.04999-12.02999c0-.85.39001-1.63997 1.06001-2.15997l7-5.45001c.99-.77 2.38-.77 3.38 0l7 5.44c.66.52 1.06 1.32998 1.06 2.16998v12.02999h-1.5v-12.01998c0-.38-.18-.74999-.48-.98999l-7-5.44c-.45-.35-1.08-.35-1.54 0l-7.00001 5.45001c-.3.23-.48.59998-.48.97998z" />
+                <path
+                    d="m14.5 22.75h-5c-.41 0-.75-.34-.75-.75v-3.5c0-1.24 1.01-2.25 2.25-2.25h2c1.24 0 2.25 1.01 2.25 2.25v3.5c0 .41-.34.75-.75.75zm-4.25-1.5h3.5v-2.75c0-.41-.34-.75-.75-.75h-2c-.41 0-.75.34-.75.75z" />
+                <path
+                    d="m9.5 14.5h-2c-.96 0-1.75-.79-1.75-1.75v-1.5c0-.96.79-1.75 1.75-1.75h2c.96 0 1.75.79 1.75 1.75v1.5c0 .96-.79 1.75-1.75 1.75zm-2-3.5c-.14 0-.25.11-.25.25v1.5c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-1.5c0-.14-.11-.25-.25-.25z" />
+                <path
+                    d="m16.5 14.5h-2c-.96 0-1.75-.79-1.75-1.75v-1.5c0-.96.79-1.75 1.75-1.75h2c.96 0 1.75.79 1.75 1.75v1.5c0 .96-.79 1.75-1.75 1.75zm-2-3.5c-.14 0-.25.11-.25.25v1.5c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-1.5c0-.14-.11-.25-.25-.25z" />
+                <path
+                    d="m19.0001 7.75c-.41 0-.75-.32999-.75-.73999l-.02-2.26001h-3.65c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4.4c.41 0 .75.32999.75.73999l.03 3c-.01.42-.34.76001-.76.76001z" />
+            </g>
+        </symbol>
+        <symbol id="chart-square" fill="none" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path d="m2 12.83v2.17c0 5 2 7 7 7h6c5 0 7-2 7-7v-6c0-5-2-7-7-7h-6c-5 0-7 2-7 7"></path>
+                <g stroke-miterlimit="10">
+                    <path d="m10.1103 11.1501h-2.65c-.63 0-1.13999.51-1.13999 1.14v5.12h3.78999z"></path>
+                    <path
+                        d="m12.7596 6.6001h-1.52c-.63 0-1.14.51001-1.14 1.14001v9.65999h3.79v-.65999c0-.63-.5-1.14001-1.13-1.14001z">
+                    </path>
+                    <path d="m16.5504 12.8501h-2.65v4.55h3.79v-3.41c-.01-.63-.52-1.14-1.14-1.14z"></path>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="bank" fill="none" viewBox="0 0 24 24">
+            <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                stroke-width="1.5">
+                <path
+                    d="m12.37 2.15009 9 3.59997c.35.14.63.56.63.93v3.32004c0 .55-.45 1-1 1h-18c-.55 0-1-.45-1-1v-3.32004c0-.37.28-.79.63-.93l9-3.59997c.2-.08.54-.08.74 0z" />
+                <path d="m22 22h-20v-3c0-.55.45-1 1-1h18c.55 0 1 .45 1 1z" />
+                <path d="m4 18v-7" />
+                <path d="m8 18v-7" />
+                <path d="m12 18v-7" />
+                <path d="m16 18v-7" />
+                <path d="m20 18v-7" />
+                <path d="m1 22h22" />
+                <path d="m12 8.5c.8284 0 1.5-.67157 1.5-1.5s-.6716-1.5-1.5-1.5-1.5.67157-1.5 1.5.6716 1.5 1.5 1.5z" />
+            </g>
+        </symbol>
+        <symbol id="mail" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+            <path d="M7 9L12 12.5L17 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z"
+                stroke="currentColor" stroke-width="1.5" />
+        </symbol>
+        <symbol id="settings-line" fill="none" viewBox="0 0 24 24">
+            <g stroke="currentColor" stroke-width="1.5">
+                <path
+                    d="m3.08168 13.9445c-.5287-.9504-.79306-1.4257-.79306-1.9445s.26436-.9941.79307-1.9445l1.34925-2.4255 1.42591-2.38124c.55875-.93309.83813-1.39964 1.28746-1.65906s.99306-.2681 2.08052-.28544l2.77517-.04426 2.7752.04426c1.0874.01734 1.6312.02602 2.0805.28544s.7287.72597 1.2874 1.65906l1.426 2.38124 1.3492 2.4255c.5287.9504.7931 1.4257.7931 1.9445s-.2644.9941-.7931 1.9445l-1.3492 2.4255-1.426 2.3812c-.5587.9331-.8381 1.3997-1.2874 1.6591s-.9931.2681-2.0805.2854l-2.7752.0443-2.77517-.0443c-1.08746-.0173-1.63119-.026-2.08052-.2854s-.72871-.726-1.28746-1.6591l-1.42591-2.3812z" />
+                <circle cx="12" cy="12" r="3" />
+            </g>
+        </symbol>
+        <symbol id="people" fill="currentColor" viewBox="0 0 24 24">
+            <g fill="currentColor">
+                <path
+                    d="m18.0003 7.91002c-.03 0-.05 0-.08 0h-.05c-1.89-.06-3.3-1.52001-3.3-3.32001 0-1.84 1.5-3.33 3.33-3.33s3.33 1.5 3.33 3.33c-.01 1.81-1.42 3.27-3.22 3.33 0-.01 0-.00999-.01-.00999zm-.1-5.16c-1.01 0-1.83.82-1.83 1.83 0 .99.77 1.79 1.76 1.83.01-.01.09-.01.18 0 .97-.05 1.72-.85 1.73-1.83 0-1.01-.82-1.83-1.84-1.83z" />
+                <path
+                    d="m18.0105 15.2801c-.39 0-.78-.03-1.17-.1-.41-.07-.68-.46-.61-.87s.46-.68.87-.61c1.23.21 2.53-.0199 3.4-.5999.47-.31.72-.7001.72-1.0901s-.26-.77-.72-1.08c-.87-.58-2.19-.81-3.43-.59-.41.08-.8-.2-.87-.60995-.07-.41.2-.8.61-.87 1.63-.29 3.32.01999 4.52.81999.88.58996 1.39 1.42996 1.39 2.32996 0 .89-.5 1.7401-1.39 2.3401-.91.6-2.09.9299-3.32.9299z" />
+                <path
+                    d="m5.97047 7.91c-.01 0-.02 0-.02 0-1.8-.06-3.21-1.52-3.22-3.32 0-1.84 1.5-3.34 3.33-3.34s3.33 1.5 3.33 3.33c0 1.81-1.41 3.27-3.21 3.33l-.21-.75.07.75c-.02 0-.05 0-.07 0zm.1-1.5c.06 0 .11 0 .17.01.89-.04 1.67-.84 1.67-1.83 0-1.01-.82-1.83001-1.83-1.83001s-1.83.82001-1.83 1.83001c0 .98.76 1.77 1.73 1.83.01-.01.05-.01.09-.01z" />
+                <path
+                    d="m5.96 15.2801c-1.23 0-2.41-.3299-3.32-.9299-.88-.59-1.39-1.4401-1.39-2.3401 0-.89.51-1.74 1.39-2.32996 1.2-.8 2.89-1.10999 4.52-.81999.41.07.68.46.61.87-.07.40995-.46.68995-.87.60995-1.24-.22-2.55.01-3.43.59-.47.31-.72.69-.72 1.08s.26.7801.72 1.0901c.87.58 2.17.8099 3.4.5999.41-.07.8.21.87.61.07.41-.2.8-.61.87-.39.07-.78.1-1.17.1z" />
+                <path
+                    d="m12.0003 15.38c-.03 0-.05 0-.08 0h-.05c-1.88999-.06-3.29999-1.52-3.29999-3.32 0-1.84 1.49999-3.33002 3.32999-3.33002s3.33 1.50002 3.33 3.33002c-.01 1.81-1.42 3.27-3.22 3.33 0-.01 0-.01-.01-.01zm-.1-5.16c-1.01 0-1.83.82-1.83 1.83 0 .99.77 1.79 1.76 1.83.01-.01.09-.01.18 0 .97-.05 1.72-.85 1.73-1.83 0-1-.82-1.83-1.84-1.83z" />
+                <path
+                    d="m11.9993 22.76c-1.2 0-2.4-.31-3.33-.94-.88-.59-1.39-1.43-1.39-2.33 0-.89.5-1.75 1.39-2.34 1.87-1.24 4.8-1.24 6.66 0 .88.59 1.39 1.43 1.39 2.33 0 .89-.5 1.75-1.39 2.34-.93.62-2.13.94-3.33.94zm-2.5-4.35c-.47.31-.72.7-.72 1.09s.26.77.72 1.08c1.35.91 3.64.91 4.99 0 .47-.31.72-.7.72-1.09s-.26-.77-.72-1.08c-1.34-.91-3.63-.9-4.99 0z" />
+            </g>
+        </symbol>
+        <symbol id="notes-lines" stroke-width="1.5" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 14L16 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 10L10 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 18L12 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M10 3H6C4.89543 3 4 3.89543 4 5V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V5C20 3.89543 19.1046 3 18 3H14.5M10 3V1M10 3V5"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="money-send" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path
+                    d="m9.5 13.75c0 .97.75 1.75 1.67 1.75h1.88c.8 0 1.45-.68 1.45-1.53 0-.91-.4-1.24-.99-1.45l-3.01-1.05c-.59-.21-.98999-.53-.98999-1.45 0-.84001.64999-1.53001 1.44999-1.53001h1.88c.92 0 1.67.78 1.67 1.75001" />
+                <path d="m12 7.5v9" />
+                <path d="m22 12c0 5.52-4.48 10-10 10s-10-4.48-10-10 4.48-10 10-10" />
+                <path d="m22 6v-4h-4" />
+                <path d="m17 7 5-5" />
+            </g>
+        </symbol>
+        <symbol id="setting" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+            <g fill="currentColor">
+                <path
+                    d="m12 15.75c-2.07 0-3.75-1.68-3.75-3.75s1.68-3.75 3.75-3.75 3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75zm0-6c-1.24 0-2.25 1.01-2.25 2.25s1.01 2.25 2.25 2.25 2.25-1.01 2.25-2.25-1.01-2.25-2.25-2.25z" />
+                <path
+                    d="m15.21 22.1898c-.21 0-.42-.03-.63-.08-.62-.17-1.14-.56-1.47-1.11l-.12-.2c-.59-1.02-1.4-1.02-1.99 0l-.11.19c-.33.56-.85.96-1.47 1.12-.63.17-1.28.08-1.83-.25l-1.72-.99c-.61-.35-1.05-.92-1.24-1.61-.18-.69-.09-1.4.26-2.01.29-.51.37-.97.2-1.26s-.6-.46-1.19-.46c-1.46 0-2.65-1.19-2.65-2.65v-1.76c0-1.46 1.19-2.65 2.65-2.65.59 0 1.02-.17 1.19-.46s.1-.75-.2-1.26c-.35-.61-.44-1.33-.26-2.01.18-.69.62-1.26 1.24-1.61l1.73-.99c1.13-.67 2.62-.28 3.3.87l.12.2c.59 1.02 1.4 1.02 1.99 0l.11-.19c.68-1.16 2.17-1.55 3.31-.87l1.72.99c.61.35 1.05.92 1.24 1.61.18.69.09 1.4-.26 2.01-.29.51-.37.97-.2 1.26s.6.46 1.19.46c1.46 0 2.65 1.19 2.65 2.65v1.76c0 1.46-1.19 2.65-2.65 2.65-.59 0-1.02.17-1.19.46s-.1.75.2 1.26c.35.61.45 1.33.26 2.01-.18.69-.62 1.26-1.24 1.61l-1.73.99c-.38.21-.79.32-1.21.32zm-3.21-3.7c.89 0 1.72.56 2.29 1.55l.11.19c.12.21.32.36.56.42s.48.03.68-.09l1.73-1c.26-.15.46-.4.54-.7s.04-.61-.11-.87c-.57-.98-.64-1.99-.2-2.76s1.35-1.21 2.49-1.21c.64 0 1.15-.51 1.15-1.15v-1.76c0-.63-.51-1.15-1.15-1.15-1.14 0-2.05-.44-2.49-1.21s-.37-1.78.2-2.76c.15-.26.19-.57.11-.87s-.27-.54-.53-.7l-1.73-.99c-.43-.26-1-.11-1.26.33l-.11.19c-.57.99-1.4 1.55-2.29 1.55s-1.72-.56-2.29-1.55l-.11-.2c-.25-.42-.81-.57-1.24-.32l-1.73 1c-.26.15-.46.4-.54.7s-.04.61.11.87c.57.98.64 1.99.2 2.76s-1.35 1.21-2.49 1.21c-.64 0-1.15.51-1.15 1.15v1.76c0 .63.51 1.15 1.15 1.15 1.14 0 2.05.44 2.49 1.21s.37 1.78-.2 2.76c-.15.26-.19.57-.11.87s.27.54.53.7l1.73.99c.21.13.46.16.69.1.24-.06.44-.22.57-.43l.11-.19c.57-.98 1.4-1.55 2.29-1.55z" />
+            </g>
+        </symbol>
+
+        <!-- * -- Navbar Panel -- * -->
+        <symbol id="direct-inbox" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path d="m12 2v7l2-2" />
+                <path d="m12 9-2-2" />
+
+                <path
+                    d="m1.97998 13h4.41c.38 0 .72.21.89.55l1.17 2.34c.34.68 1.03 1.11 1.79002 1.11h3.53c.76 0 1.45-.43 1.79-1.11l1.17-2.34c.17-.34.52-.55.89-.55h4.36" />
+                <path
+                    d="m7 4.12988c-3.54.52-5 2.6-5 6.87002v4c0 5 2 7 7 7h6c5 0 7-2 7-7v-4c0-4.27002-1.46-6.35002-5-6.87002" />
+            </g>
+        </symbol>
+        <symbol id="star" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <g fill="none">
+                <path
+                    d="m15.3895 5.21125 1.41 2.82c.19.39.7.76 1.13.84l2.55.42c1.63.27 2.01 1.45005.84 2.63005l-1.99 1.99c-.33.33-.52.98-.41 1.45l.57 2.46c.45 1.94-.59 2.7-2.3 1.68l-2.39-1.42c-.43-.26-1.15-.26-1.58 0l-2.39 1.42c-1.71005 1.01-2.75005.26-2.30005-1.68l.57-2.46c.09-.48-.1-1.13-.43-1.46l-1.99-1.99c-1.17-1.17-.79-2.35005.84-2.63005l2.55005-.42c.43-.07.94-.45 1.13-.84l1.41-2.82c.77-1.52 2.01-1.52 2.78.01z" />
+                <path fill="currentColor"
+                    d="m8 5.75h-6c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75z" />
+                <path fill="currentColor"
+                    d="m5 19.75h-3c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75z" />
+                <path fill="currentColor"
+                    d="m3 12.75h-1c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h1c.41 0 .75.34.75.75s-.34.75-.75.75z" />
+            </g>
+        </symbol>
+        <symbol id="outbox" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path d="m12 2v7l2-2" transform="scale(1, -1) translate(0, -18)" />
+                <path d="m12 9-2-2" transform="scale(1, -1) translate(0, -18)" />
+
+                <path
+                    d="m1.97998 13h4.41c.38 0 .72.21.89.55l1.17 2.34c.34.68 1.03 1.11 1.79002 1.11h3.53c.76 0 1.45-.43 1.79-1.11l1.17-2.34c.17-.34.52-.55.89-.55h4.36" />
+                <path
+                    d="m7 4.12988c-3.54.52-5 2.6-5 6.87002v4c0 5 2 7 7 7h6c5 0 7-2 7-7v-4c0-4.27002-1.46-6.35002-5-6.87002" />
+            </g>
+        </symbol>
+        <symbol id="delete" fill="none" viewBox="0 0 24 24">
+            <g stroke="#2a353d" stroke-linecap="round" stroke-width="1.5">
+                <path
+                    d="m19.5 5.5-.6197 10.0251c-.1584 2.5613-.2375 3.842-.8795 4.7628-.3175.4552-.7261.8394-1.2001 1.1281-.9586.584-2.2417.584-4.808.584-2.56958 0-3.8544 0-4.81365-.5851-.47425-.2892-.88305-.6741-1.20037-1.1301-.6418-.9222-.71923-2.2047-.87407-4.7696l-.60461-10.0152" />
+                <path d="m21 5.5h-18" />
+                <path
+                    d="m16.0555 5.5-.6826-1.40827c-.4535-.93547-.6803-1.40321-1.0714-1.69492-.0867-.06471-.1786-.12227-.2747-.17211-.4331-.2247-.9529-.2247-1.9925-.2247-1.0657 0-1.5985 0-2.03881.23412-.09758.05189-.1907.11178-.27838.17905-.39566.30353-.61667.78838-1.05869 1.75809l-.60569 1.32874" />
+                <path d="m9.5 16.5v-6" />
+                <path d="m14.5 16.5v-6" />
+            </g>
+        </symbol>
+        <symbol id="folder-add" fill="none" viewBox="0 0 24 24">
+            <g stroke="#292d32" stroke-miterlimit="10" stroke-width="1.5">
+                <path d="m12.0601 16.5v-5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="m14.5 14h-5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="m22 11v6c0 4-1 5-5 5h-10c-4 0-5-1-5-5v-10c0-4 1-5 5-5h1.5c1.5 0 1.83.44 2.4 1.2l1.5 2c.38.5.6.8 1.6.8h3c4 0 5 1 5 5z" />
+            </g>
+        </symbol>
+        <symbol id="client" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="m17 22.75h-10c-4.41 0-5.75-1.34-5.75-5.75v-10c0-4.41 1.34-5.75 5.75-5.75h1.5c1.75 0 2.3.57 3 1.5l1.5 2c.33.44.38.5 1 .5h3c4.41 0 5.75 1.34 5.75 5.75v6c0 4.41-1.34 5.75-5.75 5.75zm-10-20c-3.57 0-4.25.68-4.25 4.25v10c0 3.57.68 4.25 4.25 4.25h10c3.57 0 4.25-.68 4.25-4.25v-6c0-3.57-.68-4.25-4.25-4.25h-3c-1.28 0-1.7-.44-2.2-1.1l-1.5-2c-.52-.69-.67-.9-1.8-.9z"
+                fill="#292d32" />
+        </symbol>
+        <!-- * -- Main header -- * -->
+        <symbol id="search" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+            <path
+                d="m16.9994165 16.2923098 3.8541369 3.8541368c.1952621.1952622.1952621.5118446 0 .7071068-.1952622.1952621-.5118446.1952621-.7071068 0l-3.8541368-3.8541369c-1.4103486 1.2450743-3.2630999 2.0005835-5.2923098 2.0005835-4.418278 0-8-3.581722-8-8s3.581722-8 8-8 8 3.581722 8 8c0 2.0292099-.7555092 3.8819612-2.0005835 5.2923098zm-5.9994165 1.7076902c3.8659932 0 7-3.1340068 7-7 0-3.86599325-3.1340068-7-7-7-3.86599325 0-7 3.13400675-7 7 0 3.8659932 3.13400675 7 7 7z" />
+        </symbol>
+        <symbol id="notification" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3">
+                <path
+                    d="m2.52992 14.394c-.21265 1.3531.73808 2.2922 1.90213 2.7602 4.46276 1.7944 10.67315 1.7944 15.13585 0 1.1641-.468 2.1148-1.4071 1.9022-2.7602-.1307-.8315-.7769-1.5239-1.2557-2.2-.6271-.8965-.6894-1.8743-.6895-2.91459 0-4.02031-3.369-7.27941-7.5249-7.27941-4.15587 0-7.52487 3.2591-7.52487 7.27941-.0001 1.04029-.06241 2.01809-.68952 2.91459-.47877.6761-1.125 1.3685-1.25569 2.2z" />
+                <path d="m9 21c.79613.6219 1.8475 1 3 1s2.2039-.3781 3-1" />
+            </g>
+        </symbol>
+        <symbol id="profile" fill="currentColor" viewBox="0 0 24 24">
+            <g fill="currentColor">
+                <path
+                    d="m12.1205 13.53c-.02 0-.05 0-.07 0-.03 0-.07 0-.1 0-2.27003-.07-3.97003-1.84-3.97003-4.02002 0-2.22 1.81-4.03 4.03003-4.03 2.22 0 4.03 1.81 4.03 4.03-.01 2.19002-1.72 3.95002-3.89 4.02002-.02 0-.02 0-.03 0zm-.12-6.56002c-1.4 0-2.53003 1.14-2.53003 2.53 0 1.37002 1.07003 2.48002 2.43003 2.53002.03-.01.13-.01.23 0 1.34-.07 2.39-1.17 2.4-2.53002 0-1.39-1.13-2.53-2.53-2.53z" />
+                <path
+                    d="m12.0008 22.7501c-2.68999 0-5.25999-1-7.24999-2.82-.18-.16-.26-.4-.24-.63.13-1.19.87-2.3 2.1-3.12 2.98-1.98 7.80999-1.98 10.77999 0 1.23.83 1.97 1.93 2.1 3.12.03.24-.06.47-.24.63-1.99 1.82-4.56 2.82-7.25 2.82zm-5.91999-3.65c1.66 1.39 3.75 2.15 5.91999 2.15 2.17 0 4.26-.76 5.92-2.15-.18-.61-.66-1.2-1.37-1.68-2.46-1.64-6.62999-1.64-9.10999 0-.71.48-1.18 1.07-1.36 1.68z" />
+                <path
+                    d="m12 22.75c-5.93 0-10.75-4.82-10.75-10.75s4.82-10.75 10.75-10.75 10.75 4.82 10.75 10.75-4.82 10.75-10.75 10.75zm0-20c-5.1 0-9.25 4.15-9.25 9.25s4.15 9.25 9.25 9.25 9.25-4.15 9.25-9.25-4.15-9.25-9.25-9.25z" />
+            </g>
+        </symbol>
+    </svg>
+    <!-- <div class="main-container"> -->
+        <aside class="sidebar">
+            <div class="navbar">
+                <div class="navbar__header">
+                    <div class="navbar-logo">
+                        <h2 class="navbar-logo__text">dappr</h2>
+                    </div>
+                    <div class="navbar-toggle">
+                        <svg class="navbar-toggle__icon">
+                            <use href="#chevron-circle-left-alt" />
+                        </svg>
+                    </div>
+                </div>
+                <nav class="navbar__menu">
+                    <ul class="menu-list">
+                        <li class="menu-list__item menu-list__item--active">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#home" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#chart-square" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#bank" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#mail" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item menu-list__item--space ">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#settings-line" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#people" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#notes-lines" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#" class="menu-list__link">
+                                <svg class="menu-list__icon">
+                                    <use href="#money-send" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navbar__footer">
+                    <a href="#" class="footer-link">
+                        <svg class="footer-link__icon">
+                            <use href="#setting" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel__header">
+                    <h2 class="panel__title">Email</h2>
+                </div>
+                <div class="panel-menu">
+                    <div class="panel-menu__group-actions">
+                        <div class="panel-menu__item panel-menu__item--active">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#direct-inbox" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Inbox</a>
+                            </div>
+                            <span class="panel-menu__badge">4</span>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#star" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Important</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#outbox" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Sent</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#notes-lines" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Drafts</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#delete" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-menu__group-settings">
+                        <div class="panel-menu-settings-header">
+                            <h2 class="panel-menu-settings-header__title">Folders</h2>
+                            <svg class="panel-menu-settings-header__icon">
+                                <use href="#setting" />
+                            </svg>
+                        </div>
+                        <div class="panel-menu__item ">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#folder-add" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Add Folder</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#client" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Client</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="main-header">
+                <div class="breadcrumb">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a href="#" class="breadcrumb__link">Pages</a>
+                        </li>
+                        <li class="breadcrumb__item breadcrumb__item--active">
+                            <a href="#" class="breadcrumb__link">Dashboard</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="actions">
+                    <div class="action-search">
+                        <svg class="action-search__icon">
+                            <use href="#search" />
+                        </svg>
+                        <input type="text" class="action-search__input" value="" placeholder="Type here...">
+                    </div>
+                    <div class="action-notification">
+                        <svg class="action-notification__icon">
+                            <use href="#notification" />
+                        </svg>
+                        <div class="action-notification__dropdown">
+
+                        </div>
+                    </div>
+                    <div class="action-user">
+                        <svg class="action-user__icon">
+                            <use href="#profile" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-info">
+                    <h3 class="page-info__title">Dashboard</h3>
+                    <p class="page-info__description">Check the sales, value and bounce rate by country.</p>
+                </div>
+
+            </div>
+        </main>
+    <!-- </div> -->
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
