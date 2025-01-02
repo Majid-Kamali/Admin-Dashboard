@@ -197,207 +197,272 @@
                     d="m12 22.75c-5.93 0-10.75-4.82-10.75-10.75s4.82-10.75 10.75-10.75 10.75 4.82 10.75 10.75-4.82 10.75-10.75 10.75zm0-20c-5.1 0-9.25 4.15-9.25 9.25s4.15 9.25 9.25 9.25 9.25-4.15 9.25-9.25-4.15-9.25-9.25-9.25z" />
             </g>
         </symbol>
+
+        <symbol id="ckdoble-chemark" viewBox="0 0 24 24" fill="currentColor">
+            <g clip-path="url(#clip0_949_23339)">
+                <path
+                    d="M17.5821 6.95711C17.9726 6.56658 17.9726 5.93342 17.5821 5.54289C17.1916 5.15237 16.5584 5.15237 16.1679 5.54289L5.54545 16.1653L1.70711 12.327C1.31658 11.9365 0.683417 11.9365 0.292893 12.327C-0.0976311 12.7175 -0.097631 13.3507 0.292893 13.7412L4.83835 18.2866C5.22887 18.6772 5.86204 18.6772 6.25256 18.2866L17.5821 6.95711Z"
+                    fill="#000000" />
+                <path
+                    d="M23.5821 6.95711C23.9726 6.56658 23.9726 5.93342 23.5821 5.54289C23.1915 5.15237 22.5584 5.15237 22.1678 5.54289L10.8383 16.8724C10.4478 17.263 10.4478 17.8961 10.8383 18.2866C11.2288 18.6772 11.862 18.6772 12.2525 18.2866L23.5821 6.95711Z"
+                    fill="#000000" />
+            </g>
+            <defs>
+                <clipPath id="clip0_949_23339">
+                    <rect width="24" height="24" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol id="checkmark" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"
+                fill="currentColor" />
+        </symbol>
     </svg>
-    <!-- <div class="main-container"> -->
-        <aside class="sidebar">
-            <div class="navbar">
-                <div class="navbar__header">
-                    <div class="navbar-logo">
-                        <h2 class="navbar-logo__text">dappr</h2>
+
+    <aside class="sidebar">
+        <div class="navbar">
+            <div class="navbar__header">
+                <div class="navbar-logo">
+                    <h2 class="navbar-logo__text">dappr</h2>
+                </div>
+                <div class="navbar-toggle">
+                    <svg class="navbar-toggle__icon">
+                        <use href="#chevron-circle-left-alt" />
+                    </svg>
+                </div>
+            </div>
+            <nav class="navbar__menu">
+                <ul class="menu-list">
+                    <li class="menu-list__item menu-list__item--active">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#home" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#chart-square" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#bank" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#mail" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item menu-list__item--space ">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#settings-line" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#people" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#notes-lines" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link">
+                            <svg class="menu-list__icon">
+                                <use href="#money-send" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="navbar__footer">
+                <a href="#" class="footer-link">
+                    <svg class="footer-link__icon">
+                        <use href="#setting" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel__header">
+                <h2 class="panel__title">Email</h2>
+            </div>
+            <div class="panel-menu">
+                <div class="panel-menu__group-actions">
+                    <div class="panel-menu__item panel-menu__item--active">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#direct-inbox" />
+                            </svg>
+                            <a href="#" class="panel-menu__link">Inbox</a>
+                        </div>
+                        <span class="panel-menu__badge">4</span>
                     </div>
-                    <div class="navbar-toggle">
-                        <svg class="navbar-toggle__icon">
-                            <use href="#chevron-circle-left-alt" />
-                        </svg>
+                    <div class="panel-menu__item">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#star" />
+                            </svg>
+                            <a href="#" class="panel-menu__link">Important</a>
+                        </div>
+                    </div>
+                    <div class="panel-menu__item">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#outbox" />
+                            </svg>
+                            <a href="#" class="panel-menu__link">Sent</a>
+                        </div>
+                    </div>
+                    <div class="panel-menu__item">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#notes-lines" />
+                            </svg>
+                            <a href="#" class="panel-menu__link">Drafts</a>
+                        </div>
+                    </div>
+                    <div class="panel-menu__item">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#delete" />
+                            </svg>
+                            <a href="#" class="panel-menu__link">Delete</a>
+                        </div>
                     </div>
                 </div>
-                <nav class="navbar__menu">
-                    <ul class="menu-list">
-                        <li class="menu-list__item menu-list__item--active">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#home" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#chart-square" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#bank" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#mail" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item menu-list__item--space ">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#settings-line" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#people" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#notes-lines" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="menu-list__link">
-                                <svg class="menu-list__icon">
-                                    <use href="#money-send" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="navbar__footer">
-                    <a href="#" class="footer-link">
-                        <svg class="footer-link__icon">
+                <div class="panel-menu__group-settings">
+                    <div class="panel-menu-settings-header">
+                        <h2 class="panel-menu-settings-header__title">Folders</h2>
+                        <svg class="panel-menu-settings-header__icon">
                             <use href="#setting" />
                         </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="panel">
-                <div class="panel__header">
-                    <h2 class="panel__title">Email</h2>
-                </div>
-                <div class="panel-menu">
-                    <div class="panel-menu__group-actions">
-                        <div class="panel-menu__item panel-menu__item--active">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#direct-inbox" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Inbox</a>
-                            </div>
-                            <span class="panel-menu__badge">4</span>
-                        </div>
-                        <div class="panel-menu__item">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#star" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Important</a>
-                            </div>
-                        </div>
-                        <div class="panel-menu__item">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#outbox" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Sent</a>
-                            </div>
-                        </div>
-                        <div class="panel-menu__item">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#notes-lines" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Drafts</a>
-                            </div>
-                        </div>
-                        <div class="panel-menu__item">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#delete" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Delete</a>
-                            </div>
-                        </div>
                     </div>
-
-                    <div class="panel-menu__group-settings">
-                        <div class="panel-menu-settings-header">
-                            <h2 class="panel-menu-settings-header__title">Folders</h2>
-                            <svg class="panel-menu-settings-header__icon">
-                                <use href="#setting" />
+                    <div class="panel-menu__item ">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#folder-add" />
                             </svg>
+                            <a href="#" class="panel-menu__link">Add Folder</a>
                         </div>
-                        <div class="panel-menu__item ">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#folder-add" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Add Folder</a>
+                    </div>
+                    <div class="panel-menu__item">
+                        <div class="panel-menu__content">
+                            <svg class="panel-menu__icon">
+                                <use href="#client" />
+                            </svg>
+                            <a href="#" class="panel-menu__link">Client</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <header class="header">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="#" class="breadcrumb__link">Pages</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--active">
+                    <a href="#" class="breadcrumb__link">Dashboard</a>
+                </li>
+            </ol>
+        </nav>
+        <div class="header-actions">
+            <div class="header-actions-search">
+                <svg class="header-actions-search__icon" aria-hidden="true">
+                    <use href="#search" />
+                </svg>
+                <input type="text" class="header-actions-search__input" value="" placeholder="Type here...">
+            </div>
+            <div class="header-actions-notification">
+                <svg class="header-actions-notification__icon" aria-hidden="true">
+                    <use href="#notification" />
+                </svg>
+                <div class="header-notification__dropdown">
+                    <div class="header-notification-tabs">
+                        <span class="header-notification-tabs__btn header-notification-tabs--active" data-tab="notification-messages">Messages</span>
+                        <span class="header-notification-tabs__btn " data-tab="notification-tasks">Today'sTask</span>
+                        <span class="header-notification-tabs__btn" data-tab="notification-activities">Last Activity</span>
+                    </div>
+                    <div class="header-notification-panels">
+                        <div class="notification-panel active" data-tab="notification-messages">
+                            <div class="notification-panel-controllers">
+                                <h3 class="notification-messages-controllers__title">Messages</h3>
+                                <span class="notification-messages-controllers__desciption">Make read</span>
+                            </div>
+                            <div class="notification-panel__list">
+                                <div class="notification-panel__item">
+                                    <span class="notification-panel__text">Lorem ipsum dolor sit amet.</span>
+                                    <div class="notification-panel__info">
+                                        <span class="notification-panel__data-time">Saturday 15:10 PM - </span>
+                                        <svg class="notification-panel__status-icon">
+                                            <use href="#ckdoble-chemark" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                                <div class="notification-panel__item">
+                                    <span class="notification-panel__text">Lorem ipsum dolor sit amet.</span>
+                                    <div class="notification-panel__info">
+                                        <span class="notification-panel__data-time">Tomorrow 14:00 PM - </span>
+                                        <svg class="notification-panel__status-icon">
+                                            <use href="#ckdoble-chemark" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="panel-menu__item">
-                            <div class="panel-menu__content">
-                                <svg class="panel-menu__icon">
-                                    <use href="#client" />
-                                </svg>
-                                <a href="#" class="panel-menu__link">Client</a>
+                        <div class="notification-panel" data-tab="notification-tasks">
+                            <div class="notification-panel-controllers">
+                                <h3 class=""></h3>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="notification-panel" data-tab="notification-activities">
+                            <div class="notification-panel-controllers">
+                                <h3 class=""></h3>
+                                <span></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </aside>
-        <main class="main">
-            <div class="main-header">
-                <div class="breadcrumb">
-                    <ol class="breadcrumb__list">
-                        <li class="breadcrumb__item">
-                            <a href="#" class="breadcrumb__link">Pages</a>
-                        </li>
-                        <li class="breadcrumb__item breadcrumb__item--active">
-                            <a href="#" class="breadcrumb__link">Dashboard</a>
-                        </li>
-                    </ol>
-                </div>
-                <div class="actions">
-                    <div class="action-search">
-                        <svg class="action-search__icon">
-                            <use href="#search" />
-                        </svg>
-                        <input type="text" class="action-search__input" value="" placeholder="Type here...">
-                    </div>
-                    <div class="action-notification">
-                        <svg class="action-notification__icon">
-                            <use href="#notification" />
-                        </svg>
-                        <div class="action-notification__dropdown">
-
-                        </div>
-                    </div>
-                    <div class="action-user">
-                        <svg class="action-user__icon">
-                            <use href="#profile" />
-                        </svg>
-                    </div>
-                </div>
+            <div class="header-actions-user">
+                <svg class="header-actions-user__icon" aria-hidden="true">
+                    <use href="#profile" />
+                </svg>
             </div>
-            <div class="container">
-                <div class="page-info">
-                    <h3 class="page-info__title">Dashboard</h3>
-                    <p class="page-info__description">Check the sales, value and bounce rate by country.</p>
-                </div>
-
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="page-info">
+                <h3 class="page-info__title">Dashboard</h3>
+                <p class="page-info__description">Check the sales, value and bounce rate by country.</p>
             </div>
-        </main>
-    <!-- </div> -->
+
+        </div>
+    </main>
+
 
     <script src="./js/app.js"></script>
 </body>

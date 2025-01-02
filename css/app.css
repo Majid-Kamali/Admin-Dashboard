@@ -77,7 +77,7 @@ body {
     width: 100%;
     max-width: 30rem;
     height: 100vh;
-    z-index: 999;
+    z-index: 10;
     padding: 2rem 0 2rem 3rem;
     display: flex;
     backdrop-filter: blur(10px);
@@ -306,30 +306,11 @@ body {
     vertical-align: middle;
 }
 
-/*
 
--- Main --
 
-*/
+/* header */
 
-.main {
-    position: relative;
-    right: 0;
-    left: 30rem;
-    top: 0;
-    width: calc(100% - 30rem);
-    height: 100vh;
-    transition: all 0.3s ease-in-out;
-}
-
-.sidebar.hidden~.main {
-    left: 15rem;
-    width: calc(100% - 15rem);
-}
-
-/* main header */
-
-.main-header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -337,6 +318,18 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    right: 0;
+    left: 30rem;
+    top: 0;
+    width: calc(100% - 30rem);
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.sidebar.hidden~.header {
+    left: 15rem;
+    width: calc(100% - 15rem);
 }
 
 .breadcrumb {}
@@ -374,7 +367,7 @@ body {
     font-size: 1.6rem;
 }
 
-.actions {
+.header-actions {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,7 +375,7 @@ body {
 }
 
 
-.action-search {
+.header-actions-search {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -391,29 +384,150 @@ body {
     border-radius: 1.2rem;
 }
 
-.action-search__input {
+.header-actions-search__input {
     border: none;
     width: 100%;
     height: 100%;
     outline: none;
 }
 
-.action-user__icon,
-.action-notification__icon,
-.action-search__icon {
+.header-actions-user__icon,
+.header-actions-notification__icon,
+.header-actions-search__icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
-.action-notification {}
+.header-actions-notification {}
 
-.action-notification__dropdown {}
+.header-notification__dropdown {
+    position: absolute;
+    top: 8rem;
+    right: 6rem;
+    max-width: 40rem;
+    max-height: 0;
+    z-index: 10;
+    border-radius: 1.2rem;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    overflow: hidden;
+    visibility: hidden;
+}
 
-.action-user {}
+.header-notification__dropdown.open {
+    max-height: 40rem;
+    visibility: visible;
+}
 
 
-/* main body */
+.header-notification-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dfdede;
+}
+
+.header-notification-tabs__btn {
+    padding: 2rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.header-notification-tabs--active {
+    border-bottom: .2rem solid #707070;
+}
+
+.header-notification-panels {
+    padding: 2rem;
+}
+
+.header-actions-user {}
+
+.notification-panel {
+    display: none;
+}
+
+.notification-panel.active {
+    display: block;
+}
+
+.notification-panel-controllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.notification-panel-controllers__title {}
+
+.notification-panel-controllers__desciption {}
+
+.notification-panel__list {}
+
+.notification-panel__item {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: #faf8fb4a;
+    margin-bottom: 1rem;
+    border-radius: 1.2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.notification-panel__text {
+    border-bottom: .1rem solid #c7c7c7;
+    padding-bottom: 1.5rem;
+    width: 32rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification-panel__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-panel__data-time {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.notification-panel__status-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/*
+
+-- Main --
+
+*/
+
+.main {
+    position: relative;
+    right: 0;
+    left: 30rem;
+    top: 0;
+    width: calc(100% - 30rem);
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+    z-index: 9;
+}
+
+.sidebar.hidden~.main {
+    left: 15rem;
+    width: calc(100% - 15rem);
+}
 
 .page-info {}
 

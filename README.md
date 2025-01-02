@@ -1,6 +1,13 @@
 #  Title
-## Dashboard Email Control
+## Admin Dashboard  
+
+### ** Languages **
+- ⚡ `JavaScript`  
+- 😄 ```<HTML>``` + ```{CSS}```  
+
+### ** About Coding **
+- use The BEM Naming Convention
 
 
-#  Website Icon use in this project 
+#  we use this icon for this project 
 ## https://iconduck.com
