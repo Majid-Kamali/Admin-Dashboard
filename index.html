@@ -234,56 +234,56 @@
             </div>
             <nav class="navbar__menu">
                 <ul class="menu-list">
-                    <li class="menu-list__item menu-list__item--active">
+                    <li class="menu-list__item" data-panel="panel-dashboard">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#home" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item">
+                    <li class="menu-list__item" data-panel="panel-analysis">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#chart-square" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item">
+                    <li class="menu-list__item" data-panel="panel-financial">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#bank" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item">
+                    <li class="menu-list__item menu-list__item--active" data-panel="panel-email">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#mail" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item menu-list__item--space ">
+                    <li class="menu-list__item menu-list__item--space " data-panel="panel-security">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#settings-line" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item">
+                    <li class="menu-list__item" data-panel="panel-users">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#people" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item">
+                    <li class="menu-list__item" data-panel="panel-report">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#notes-lines" />
                             </svg>
                         </a>
                     </li>
-                    <li class="menu-list__item">
+                    <li class="menu-list__item" data-panel="panel-management">
                         <a href="#" class="menu-list__link">
                             <svg class="menu-list__icon">
                                 <use href="#money-send" />
@@ -300,79 +300,88 @@
                 </a>
             </div>
         </div>
-        <div class="panel">
-            <div class="panel__header">
-                <h2 class="panel__title">Email</h2>
-            </div>
-            <div class="panel-menu">
-                <div class="panel-menu__group-actions">
-                    <div class="panel-menu__item panel-menu__item--active">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#direct-inbox" />
-                            </svg>
-                            <a href="#" class="panel-menu__link">Inbox</a>
+        <div class="panels">
+            <div class="panel" data-panel="panel-dashboard"></div>
+            <div class="panel" data-panel="panel-analysis"></div>
+            <div class="panel" data-panel="panel-financial"></div>
+            <div class="panel panel--active" data-panel="panel-email">
+                <div class="panel__header">
+                    <h2 class="panel__title">Email</h2>
+                </div>
+                <div class="panel-menu">
+                    <div class="panel-menu__group-actions">
+                        <div class="panel-menu__item panel-menu__item--active">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#direct-inbox" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Inbox</a>
+                            </div>
+                            <span class="panel-menu__badge">4</span>
                         </div>
-                        <span class="panel-menu__badge">4</span>
-                    </div>
-                    <div class="panel-menu__item">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#star" />
-                            </svg>
-                            <a href="#" class="panel-menu__link">Important</a>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#star" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Important</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#outbox" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Sent</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#notes-lines" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Drafts</a>
+                            </div>
+                        </div>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#delete" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Delete</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="panel-menu__item">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#outbox" />
+                    <div class="panel-menu__group-settings">
+                        <div class="panel-menu-settings-header">
+                            <h2 class="panel-menu-settings-header__title">Folders</h2>
+                            <svg class="panel-menu-settings-header__icon">
+                                <use href="#setting" />
                             </svg>
-                            <a href="#" class="panel-menu__link">Sent</a>
                         </div>
-                    </div>
-                    <div class="panel-menu__item">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#notes-lines" />
-                            </svg>
-                            <a href="#" class="panel-menu__link">Drafts</a>
+                        <div class="panel-menu__item ">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#folder-add" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Add Folder</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="panel-menu__item">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#delete" />
-                            </svg>
-                            <a href="#" class="panel-menu__link">Delete</a>
+                        <div class="panel-menu__item">
+                            <div class="panel-menu__content">
+                                <svg class="panel-menu__icon">
+                                    <use href="#client" />
+                                </svg>
+                                <a href="#" class="panel-menu__link">Client</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="panel-menu__group-settings">
-                    <div class="panel-menu-settings-header">
-                        <h2 class="panel-menu-settings-header__title">Folders</h2>
-                        <svg class="panel-menu-settings-header__icon">
-                            <use href="#setting" />
-                        </svg>
-                    </div>
-                    <div class="panel-menu__item ">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#folder-add" />
-                            </svg>
-                            <a href="#" class="panel-menu__link">Add Folder</a>
-                        </div>
-                    </div>
-                    <div class="panel-menu__item">
-                        <div class="panel-menu__content">
-                            <svg class="panel-menu__icon">
-                                <use href="#client" />
-                            </svg>
-                            <a href="#" class="panel-menu__link">Client</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div class="panel" data-panel="panel-security"></div>
+            <div class="panel" data-panel="panel-users"></div>
+            <div class="panel" data-panel="panel-report"></div>
+            <div class="panel" data-panel="panel-management"></div>
         </div>
     </aside>
     <header class="header">
@@ -399,12 +408,14 @@
                 </svg>
                 <div class="header-notification__dropdown">
                     <div class="header-notification-tabs">
-                        <span class="header-notification-tabs__btn header-notification-tabs--active" data-tab="notification-messages">Messages</span>
+                        <span class="header-notification-tabs__btn header-notification-tabs--active"
+                            data-tab="notification-messages">Messages</span>
                         <span class="header-notification-tabs__btn " data-tab="notification-tasks">Today'sTask</span>
-                        <span class="header-notification-tabs__btn" data-tab="notification-activities">Last Activity</span>
+                        <span class="header-notification-tabs__btn" data-tab="notification-activities">Last
+                            Activity</span>
                     </div>
                     <div class="header-notification-panels">
-                        <div class="notification-panel active" data-tab="notification-messages">
+                        <div class="notification-panel notification-panel--active" data-tab="notification-messages">
                             <div class="notification-panel-controllers">
                                 <h3 class="notification-messages-controllers__title">Messages</h3>
                                 <span class="notification-messages-controllers__desciption">Make read</span>

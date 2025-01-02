@@ -204,10 +204,17 @@ body {
 
 .panel {
     position: relative;
-    width: 18rem;
+    width: 0;
     height: auto;
     opacity: 1;
     overflow: hidden;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.panel.panel--active {
+    width: 18rem;
+    visibility: visible;
 }
 
 .panel.hidden {
@@ -452,7 +459,7 @@ body {
     display: none;
 }
 
-.notification-panel.active {
+.notification-panel.notification-panel--active {
     display: block;
 }
 
